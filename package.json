@@ -4,7 +4,13 @@
   "private": true,
   "description": "Plataforma SaaS inmobiliaria y de construcción — Loja",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "db:start": "supabase start",
+  "db:stop": "supabase stop",
+  "db:status": "supabase status",
+  "db:reset": "supabase db reset",
+  "db:new": "supabase migration new"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
@@ -12,5 +18,7 @@
       "onFail": "download"
     }
   },
-  "packageManager": "pnpm@12.23.0+sha256.6501a897dcfe072e8df2957c94c46f27f71901b28f2e02a167f91e0ac7905859"
+  "devDependencies": {
+    "supabase": "^3.2.0"
+  }
 }
